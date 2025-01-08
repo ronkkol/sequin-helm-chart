@@ -1,6 +1,6 @@
 apiVersion: v2
-name: sequin
-description: Helm chart for Sequin with PostgreSQL and Redis
-version: 0.1.0
+name: sequin-standalone
+description: Helm chart for Sequin with optional PostgreSQL and Redis
+version: 0.0.1
 type: application
 

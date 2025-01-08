@@ -19,6 +19,7 @@ sequin:
     redisUrl: "redis://sequin-redis:6379"
 
 postgres:
+  enabled: true
   image:
     repository: postgres
     tag: "16"
@@ -37,6 +38,7 @@ postgres:
     size: 1Gi
 
 redis:
+  enabled: true
   image:
     repository: redis
     tag: "7"
