@@ -50,3 +50,12 @@ redis:
   persistence:
     enabled: true
     size: 1Gi
+
+ingress:
+  enabled: false
+  ingressClassName: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - /
