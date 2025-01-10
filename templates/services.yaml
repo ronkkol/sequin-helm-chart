@@ -11,7 +11,7 @@ spec:
   selector:
     app: {{ .Release.Name }}-sequin
 ---
-{{- if .Values.postgres.enabled -}}
+{{ if .Values.postgres.enabled -}}
 apiVersion: v1
 kind: Service
 metadata:
@@ -23,9 +23,9 @@ spec:
       targetPort: 5432
   selector:
     app: {{ .Release.Name }}-postgres
-{{- end -}}
+{{- end }}
 ---
-{{- if .Values.redis.enabled -}}
+{{ if .Values.redis.enabled -}}
 apiVersion: v1
 kind: Service
 metadata:
@@ -37,4 +37,4 @@ spec:
       targetPort: 6379
   selector:
     app: {{ .Release.Name }}-redis
-{{- end -}}
+{{- end }}

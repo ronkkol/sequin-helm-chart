@@ -3,4 +3,3 @@ name: sequin-standalone
 description: Helm chart for Sequin with optional PostgreSQL, Redis and ingress
 version: 0.0.2
 type: application
-

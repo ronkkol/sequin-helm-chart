@@ -2,12 +2,12 @@ apiVersion: v1
 entries:
   sequin-standalone:
   - apiVersion: v2
-    created: "2025-01-08T15:54:22.779985+02:00"
+    created: "2025-01-10T11:44:50.109192+02:00"
     description: Helm chart for Sequin with optional PostgreSQL, Redis and ingress
-    digest: 76912a3a6e94bd5ebae4e1be3ca4e2c93707be073b80245f11e63b17f5ed624e
+    digest: 0c5c7f9721752ada0e0315d3733091b51ae237b0cba4bae95a8d60f8a9988e81
     name: sequin-standalone
     type: application
     urls:
     - sequin-standalone-0.0.2.tgz
     version: 0.0.2
-generated: "2025-01-08T15:54:22.777857+02:00"
+generated: "2025-01-10T11:44:50.100423+02:00"
