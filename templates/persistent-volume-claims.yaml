@@ -1,5 +1,5 @@
-{{- if .Values.postgres.enabled -}}
-{{- if .Values.postgres.persistence.enabled -}}
+{{ if .Values.postgres.enabled -}}
+{{ if .Values.postgres.persistence.enabled -}}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -14,15 +14,15 @@ spec:
 {{- end }}
 {{- end }}
 ---
-{{- if .Values.redis.enabled -}}
-{{- if .Values.redis.persistence.enabled -}}
+{{ if .Values.redis.enabled -}}
+{{ if .Values.redis.persistence.enabled -}}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ .Release.Name }}-redis-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
+    - {{ .Values.redis.persistence.accessMode }}
   storageClassName: hostpath
   resources:
     requests:

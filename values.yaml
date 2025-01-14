@@ -49,6 +49,7 @@ redis:
     nodePort: 7378
   persistence:
     enabled: true
+    accessMode: ReadWriteOnce
     size: 1Gi
 
 ingress:
@@ -58,4 +59,5 @@ ingress:
   hosts:
     - host: chart-example.local
       paths:
-        - /
+        - path: /
+          pathType: Prefix

@@ -1,4 +1,4 @@
-{{- if .Values.redis.enabled -}}
+{{ if .Values.redis.enabled -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,4 +29,4 @@ spec:
         - name: redis-data
           persistentVolumeClaim:
             claimName: {{ .Release.Name }}-redis-pvc
-{{- end -}}
+{{- end }}
