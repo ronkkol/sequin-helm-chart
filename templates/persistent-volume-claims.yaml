@@ -6,8 +6,8 @@ metadata:
   name: {{ .Release.Name }}-postgres-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
-  storageClassName: hostpath
+    - {{ .Values.postgres.persistence.accessMode }}
+  storageClassName: {{ .Values.postgres.persistence.storageClass }}
   resources:
     requests:
       storage: {{ .Values.postgres.persistence.size }}
@@ -23,7 +23,7 @@ metadata:
 spec:
   accessModes:
     - {{ .Values.redis.persistence.accessMode }}
-  storageClassName: hostpath
+  storageClassName: {{ .Values.redis.persistence.storageClass }}
   resources:
     requests:
       storage: {{ .Values.redis.persistence.size }}

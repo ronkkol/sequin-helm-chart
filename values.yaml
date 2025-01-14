@@ -1,4 +1,5 @@
 sequin:
+  annotations: {}
   image:
     repository: sequin/sequin
     tag: latest
@@ -35,7 +36,9 @@ postgres:
     walLevel: logical
   persistence:
     enabled: true
+    accessMode: ReadWriteOnce
     size: 1Gi
+    storageClass: hostpath
 
 redis:
   enabled: true
@@ -51,6 +54,7 @@ redis:
     enabled: true
     accessMode: ReadWriteOnce
     size: 1Gi
+    storageClass: hostpath
 
 ingress:
   enabled: false
